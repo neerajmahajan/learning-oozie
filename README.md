@@ -17,8 +17,13 @@
 * can run map-reduce, pig, hive, sqoop, java programs, shell programs (out of box)
 * Provide CLI and a web UI for monitoring.
 
-###### Workflow.xml
+###### Workflow.xml and job.properties
 * Control flow nodes define beginning and end of a workflow(start, end, fail)
 * Ozzie can be extended to support additional type of actions.
 ![](ozzie_workflow.JPG)
+
+##### Execution
+
+oozie job -config example/apps/my_job/job.properties -run //executing oozie job
+oozie job -info <job_id> // checking progress of oozie job
 
