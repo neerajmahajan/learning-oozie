@@ -20,6 +20,5 @@
 ###### Workflow.xml
 * Control flow nodes define beginning and end of a workflow(start, end, fail)
 * Ozzie can be extended to support additional type of actions.
-
-  
+![](ozzie_workflow.JPG)
 
