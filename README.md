@@ -24,6 +24,43 @@
 
 ##### Execution
 
-oozie job -config example/apps/my_job/job.properties -run //executing oozie job
-oozie job -info <job_id> // checking progress of oozie job
+* oozie job -config example/apps/my_job/job.properties -run //executing oozie job
+* oozie job -info <job_id> // checking progress of oozie job
+
+```
+<workflow-app>
+   <start to="targetActionNode" />
+   <action name="action_name">
+     <action_type>
+     .....
+     .....
+     </action_type>
+     <ok to=""/>
+     <error to=""/>
+   </action>
+   ...
+   
+   <fork name="fork_node">
+     <path start="some_action" />
+     <path start="some_other_action" />
+   </fork>
+   
+   <join name="join_node" to="some_action" />
+   
+   <decision name="name">
+      <switch>
+         <case  to="target_node"> condition </case>
+         <default to="" />
+      </switch>
+   </decision>
+   
+   <kill name="">
+     <message> dfdfdf </message>
+   </kill>
+   
+   <end name="end"/>
+       
+<workflow-app>
+
+```
 
